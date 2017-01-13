@@ -1,0 +1,50 @@
+.adv {
+    padding-top: 60px;
+    padding-bottom: 70px;
+    
+    &__title {
+        margin-bottom: 35px;
+    }
+
+    &__gallery-item {
+        display: flex;
+        width: 100%;
+    }
+
+    &__gallery-photo {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-right: 30px;
+        width: $adv-gallery-photo-width;
+    }
+
+    &__gallery-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 100px;
+        width: 100% - $adv-gallery-photo-width;
+    }
+
+    &__gallery-paragraph {
+        margin-bottom: 35px;
+    }
+
+    &__gallery-photo-item {
+        width: 234px;
+    }
+
+    &__description {
+        @include decor-line(6px, 0, auto, 89px);
+        font-family: "PlayfairDisplayReg", sans-serif;
+        position: relative;
+        padding-left: 108px;
+    }
+
+    &__description-source {
+        &:after {
+            content: ", ";
+        }
+    }
+}

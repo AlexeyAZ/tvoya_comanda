@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "GothamProLight",sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+body {
+  background-color: $main-gray;
+  color: $main-black;
+  position: relative;
+  min-width: 320px;
+}
+.slick-slide {
+    outline: none
+}
+.slick-dots {
+  li {
+    transition: 0.3s;
+    background-color: white;
+    border: 1px solid white;
+    bottom: -34px;
+    height: 16px;
+    width: 32px;
+    &:last-child {
+      margin-right: 50px;
+    }
+    &:hover {
+      border: 1px solid $adv-gallery-dots-border;
+    }
+
+    &.slick-active {
+      border: 1px solid $adv-gallery-dots-border;
+    }
+
+    button {
+      display: none;
+    }
+  }
+}

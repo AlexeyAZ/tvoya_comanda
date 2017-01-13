@@ -1,0 +1,107 @@
+.gallery {
+    background-color: white;
+    padding-top: 100px;
+    overflow: hidden;
+
+    &__info {
+        @include decor-line(10px, auto, calc(100% - 160px) , 1000px);
+        margin: 35px auto;
+        width: $gallery-content-width-desktop-xl;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__place {
+        margin-right: 4px;
+        &:after {
+            content: ", ";
+        }
+    }
+
+    &__thumbnails-container {
+        background-color: $gallery-thumbnails-bg;
+        margin-bottom: 32px;
+    }
+
+    &__thumbnails {
+        margin: 0 auto;
+        width: $gallery-content-width-desktop-xl;
+    }
+
+    &__thumbnails-item {
+        transition: 0.3s;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: red;
+        cursor: pointer;
+        opacity: 0.4;
+        margin: 8px 4px;
+        height: $gallery-thumbnails-item-size;
+        width: $gallery-thumbnails-item-size;
+        &:hover {
+            opacity: 1;
+        }
+        &.slick-current {
+            opacity: 1;
+        }
+    }
+
+    &__slider-container {
+        margin-bottom: 56px;
+        position: relative;
+    }
+
+    &__slider-side {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+
+    &__slider-side-center {
+        position: relative;
+        margin: 0 auto;
+        height: $gallery-slider-item-height-desktop-xl;
+        width: $gallery-slider-item-width-desktop-xl;
+        &:before,
+        &:after {
+            background-color: $gallery-slider-side-bg;
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 1000px;
+        }
+        &:before {
+            right: calc(100% + 24px);
+            &:hover {
+                background-color: red;
+            }
+        }
+        &:after {
+            left: calc(100% + 24px);
+        }
+    }
+
+    &__slider-item {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: blue;
+        margin: 0 12px;
+        height: $gallery-slider-item-height-desktop-xl;
+        width: $gallery-slider-item-width-desktop-xl;
+        &:nth-child(odd) {
+            background-image: url("../images/works_1.png");
+        }
+        &:nth-child(even) {
+            background-image: url("../images/works_2.png");
+        }
+    }
+}

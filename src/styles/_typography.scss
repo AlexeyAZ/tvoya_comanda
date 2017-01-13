@@ -1,0 +1,85 @@
+.text {
+
+    &_xs {
+        font-size: 12px;
+    }
+
+    &_s {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    
+    &_m {
+        font-size: 16px;
+    }
+
+    &_l {
+        font-size: 23px;
+    }
+
+    &_bold {
+
+    }
+
+    &_state_hide {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    
+    &_state_show {
+        animation: animText;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes animText {
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title {
+    font-family: "PlayfairDisplayBold", sans-serif;
+    &_s {
+        font-size: 14px;
+    }
+    
+    &_m {
+        font-size: 16px;
+    }
+
+    &_l {
+        font-size: 19px;
+    }
+
+    &_xl {
+        font-size: 23px;
+    }
+
+    &_state_hide {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    
+    &_state_show {
+        animation: animTitle;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes animTitle {
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

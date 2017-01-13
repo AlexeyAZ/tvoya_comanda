@@ -1,0 +1,24 @@
+@mixin link($color, $hover-color, $focus-color: $hover-color, $active-color: $focus-color) {
+    color: $color;
+    &:hover {
+        color: $hover-color;
+    }
+    &:focus {
+        color: $focus-color;
+    }
+    &:active {
+        color: $active-color;
+    }
+}
+@mixin decor-line($top: auto, $left: auto, $right: auto, $width: auto) {
+    &:before {
+        content: "";
+        background-color: $main-black;
+        position: absolute;
+        top: $top;
+        left: $left;
+        right: $right;
+        height: 1px;
+        width: $width;
+    }
+}

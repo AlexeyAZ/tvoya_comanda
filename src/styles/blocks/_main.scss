@@ -1,0 +1,43 @@
+.main {
+    background-image: url("../images/main.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding-bottom: 30px;
+    position: relative;
+    &:before {
+        content: "";
+        background-color: $main-bg !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    &_bg_transparent {
+        &:before {
+            animation: bgOpacity 2s ease forwards;
+        }
+    }
+    &__container {
+        padding-top: 255px;
+    }
+
+    &__content {
+        @include decor-line(9px, auto, calc(100% - 85px), 2000px);
+        position: relative;
+        margin-bottom: 130px;
+        padding-left: calc(#{$padding-desktop} + 110px);
+        max-width: 500px;
+    }
+
+    &__btn {
+        margin-top: 40px;
+    }
+}
+@keyframes bgOpacity {
+    100% {
+        background-color: transparent;
+    }
+}

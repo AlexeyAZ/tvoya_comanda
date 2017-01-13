@@ -1,0 +1,327 @@
+@media screen and (max-width: $max-width-desktop-xl + $scrollbar-width) {
+    .container {
+        width: $max-width-desktop-l;
+    }
+    .our-works {
+        &__gallery-item {
+            width: 32%;
+        }
+    }
+    .about {
+
+        &__content {
+            flex-wrap: wrap;
+        }
+
+        &__content-item {
+            width: 100%;
+
+            &_text {
+                order: 0;
+                margin-bottom: 30px;
+            }
+
+            &_photo {
+                order: 1;
+                justify-content: flex-start;
+            }
+        }
+
+        &__photo {
+            margin-right: 40px;
+        }
+    }
+    .adv {
+
+        &__gallery-photo {
+            width: 50%;
+        }
+
+        &__gallery-photo-item {
+            width: 48%;
+        }
+
+        &__gallery-text {
+            padding: 0 25px;
+            width: 50%;
+        }
+    }
+
+    .gallery {
+
+        &__info {
+            &:before {
+                right: calc(100% - 40px);
+            }
+        }
+    }
+}
+@media screen and (max-width: $max-width-desktop-l + $scrollbar-width) {
+
+    .container {
+        width: $max-width-tablet;
+    }
+
+    .gallery {
+
+        &__info {
+            width: $gallery-content-width-desktop-l;
+            &:before {
+                right: calc(100% + 20px);
+            }
+        }
+
+        &__slider-side-center {
+            height: $gallery-slider-item-height-desktop-l;
+            width: $gallery-slider-item-width-desktop-l;
+        }
+
+        &__thumbnails {
+            width: $gallery-slider-item-width-desktop-l;
+        }
+
+        &__slider-item {
+            height: $gallery-slider-item-height-desktop-l;
+            width: $gallery-slider-item-width-desktop-l;
+        }
+    }
+}
+@media screen and (max-width: $max-width-tablet + $scrollbar-width) {
+
+    .social-list {
+        &_icons {
+            .social-list__item {
+                margin-right: 16px;
+            }
+        }
+
+        &__icon {
+            margin-right: 10px;
+        }
+    }
+
+    .header {
+        &_gallery {
+            .header__nav-item {
+                margin-right: 20px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            .header__item_logo {
+                position: static;
+                padding-left: 0;
+            }
+
+            .header__container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+    .container {
+        width: $max-width-phone;
+    }
+    .our-works {
+
+        &__gallery-item {
+            width: 48%;
+        }
+    }
+    .about {
+
+        &__photo {
+            
+            &_big {
+                width: 50%;
+            }
+
+            &_small {
+                width: 40%;
+            }
+        }
+    }
+    .adv {
+        &__gallery-item {
+            flex-wrap: wrap;
+        }
+
+        &__gallery-photo {
+            margin-bottom: 40px;
+            padding: 0;
+            width: 100%;
+        }
+
+        &__gallery-photo-item {
+            width: 42%;
+        }
+
+        &__gallery-text {
+            padding: 0;
+            width: 100%;
+        }
+    }
+    .contacts {
+        &__info {
+            flex-wrap: wrap;
+        }
+
+        &__info-item {
+            width: 100%;
+        }
+
+        &__table {
+            margin-bottom: 30px;
+        }
+
+        &__photo {
+            background-size: cover;
+        }
+    }
+
+    .gallery {
+
+        &__info {
+            width: $gallery-content-width-desktop-l;
+            &:before {
+                right: calc(100% + 20px);
+            }
+        }
+
+        &__slider-side-center {
+            height: $gallery-slider-item-height-desktop-tablet;
+            width: $gallery-slider-item-width-desktop-tablet;
+        }
+
+        &__thumbnails {
+            width: $gallery-slider-item-width-desktop-tablet;
+        }
+
+        &__slider-item {
+            height: $gallery-slider-item-height-desktop-tablet;
+            width: $gallery-slider-item-width-desktop-tablet;
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+
+    .footer {
+        padding: 20px 0;
+
+        &__container {
+            flex-direction: column;
+        }
+
+        &__item {
+            &:first-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    .header {
+
+        &_gallery {
+            .header__item_logo {
+                margin-bottom: 30px;
+            }
+
+            .header__nav-item {
+                margin-right: 0;
+            }
+
+            .header__container {
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+        }
+
+        &__nav {
+            flex-direction: column;
+        }
+
+        &__nav-item {
+            margin-bottom: 20px;
+        }
+
+        &__nav-link {
+            font-size: 18px;
+            margin-right: 0;
+        }
+    }
+
+    .main {
+
+        &__container {
+            padding-top: 300px;
+        }
+    }
+    .our-works {
+
+        &__gallery {
+            justify-content: center;
+        }
+
+        &__gallery-item {
+            width: 100%;
+        }
+
+        &__gallery-photo {
+            height: 300px;
+        }
+    }
+
+    .about {
+
+        &__description {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .contacts {
+        &__info-item_text {
+            padding-right: 30px;
+        }
+    }
+
+    .gallery {
+        padding-top: 200px;
+
+        &__slider-side-center {
+            height: $gallery-slider-item-height-desktop-phone;
+            width: $gallery-slider-item-width-desktop-phone;
+        }
+
+        &__thumbnails {
+            width: $gallery-slider-item-width-desktop-phone;
+        }
+
+        &__slider-item {
+            height: $gallery-slider-item-height-desktop-phone;
+            width: $gallery-slider-item-width-desktop-phone;
+        }
+    }
+}
+@media screen and (max-width: 440px) {
+    .main {
+        &__content {
+            padding-left: 80px;
+            &:before {
+                right: calc(100% - 40px);
+            }
+        }
+    }
+    .our-works {
+
+        &__gallery-photo {
+            height: 200px;
+        }
+    }
+}

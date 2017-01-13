@@ -1,0 +1,29 @@
+extends templates/layout
+
+block vars
+    - var title = 'Gallery';
+    
+block content
+    section.section.gallery
+        div.container.gallery__container
+            div.gallery__info
+                p.title.title_l.gallery__title.
+                    Кирилл и Карина
+                p.text.text_s
+                    span.gallery__place.
+                        Италия, Довиль
+                    span.gallery__date.
+                        2016
+        div.gallery__thumbnails-container
+            div.gallery__thumbnails
+                div#galleryThumbnailsTemplate(style="display:none;")
+                    div.gallery__thumbnails-item
+        div.gallery__slider-container
+            div.gallery__slider-side
+                div.gallery__slider-side-center
+            div.gallery__slider
+                div#gallerySliderTemplate(style="display:none;")
+                    div.gallery__slider-item
+
+                
+

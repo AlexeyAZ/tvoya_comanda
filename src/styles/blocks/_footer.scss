@@ -1,0 +1,19 @@
+.footer {
+    background-color: white;
+    padding: 36px 0;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__footer-item {
+
+    }
+
+    &__logo {
+        @include link($main-black, $main-black);
+        text-decoration: none;
+    }
+}

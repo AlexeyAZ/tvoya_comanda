@@ -1,0 +1,113 @@
+.about {
+    background-color: white;
+    padding-top: 56px;
+    padding-bottom: 96px;
+
+    &__content {
+        display: flex;
+        margin-bottom: 82px;
+    }
+
+    &__content-item {
+
+        &_photo {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-right: 32px;
+            width: $about-content-item-photo-width;
+        }
+
+        &_text {
+            width: 100% - $about-content-item-photo-width;
+        }
+    }
+
+    &__photo {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(10px);
+
+        &_big {
+            width: 368px;
+        }
+
+        &_small {
+            width: 267px;
+        }
+
+        &_animate {
+            animation: photoAnimate 1s ease forwards;
+        }
+    }
+
+    &__title {
+        margin-bottom: 35px;
+        padding-top: 4px;
+    }
+
+    &__paragraph {
+        line-height: 22px;
+        margin-bottom: 40px;
+    }
+
+    &__person {
+        float: left;
+        text-align: center;
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+
+    &__person-photo {
+        background-image: url("../images/about_us3.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        display: inline-block;
+        margin-bottom: 8px;
+        height: $about-person-photo-size;
+        width: $about-person-photo-size;
+    }
+
+    &__person-name {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    &__person-post {
+        display: inline-block;
+        line-height: 17px;
+    }
+
+    &__description-wrap {
+        text-align: center;
+    }
+
+    &__description {
+        display: inline-block;
+        line-height: 30px;
+        text-align: left;
+    }
+
+    &__description-title {
+        position: relative;
+        &:before {
+            content: "";
+            background-color: $main-black;
+            position: absolute;
+            top: -17px;
+            left: 0;
+            height: 1px;
+            width: 100%;
+        }
+    }
+}
+@keyframes photoAnimate {
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }   
+}

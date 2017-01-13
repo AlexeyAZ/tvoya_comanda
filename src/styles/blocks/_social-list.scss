@@ -1,0 +1,47 @@
+.social-list {
+
+    &_icons {
+        .social-list__item {
+            &:first-child {
+                margin-right: 34px;
+            }
+        }
+    }
+    
+    &__item {
+        display: inline-block;
+        &:first-child {
+            margin-right: 12px;
+        }
+    }
+
+    &__link {
+        @include link($main-black, $main-black);
+        transition: 0.3s;
+        border-bottom: 1px solid transparent;
+        display: inline-block;
+        text-decoration: none;
+        padding-bottom: 2px;
+        &:hover {
+            border-bottom: 1px solid $main-black;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        stroke: none;
+        fill: $social-list-icon;
+        vertical-align: middle;
+        margin-right: 14px;
+        
+        &_inst {
+            height: 20px;
+            width: 20px;
+        }
+
+        &_fb {
+            height: 20px;
+            width: 10px;
+        }
+    }
+}

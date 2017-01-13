@@ -1,0 +1,125 @@
+extends templates/layout
+
+block vars
+    - var title = 'Main';
+
+block content
+    section.section.main
+        div.container.main__container
+            div.main__content
+                p.text.text_s.text_state_hide.
+                    Для воплощения любого проекта необходима командная работа под руководством опытного организатора. 
+                p.text.text_s.text_state_hide.
+                    Для этого привлекаются опытные кадры, способные быстро принимать ответственные решения, а также импровизировать в случае возникновения нештатной ситуации.
+                a.btn-rect.btn-rect_light.main__btn.js-link-smooth-scroll(href="#about").
+                    Подробнее о нас
+            ul.social-list
+                li.social-list__item
+                    a.social-list__link(href="").
+                        Facebook
+                li.social-list__item
+                    a.social-list__link(href="").
+                        Instagram
+    section.section.our-works#portfolio
+        div.container.our-works__container
+            p.title.title_xl.our-works__title.title_state_hide.
+                Наши последние работы
+            div.our-works__gallery-container
+                div.our-works__gallery
+                    //a.our-works__gallery-item(href="gallery.html")
+                        div.our-works__gallery-photo
+                        p.title.title_s.our-works__gallery-name.
+                            Алина и Искандер
+                        p.text.text_s.our-works__gallery-place.
+                            Royal
+                    div#ourWorksTemplate(style="display:none;")
+                        a.our-works__gallery-item(href="gallery.html")
+                            div.our-works__gallery-photo
+                            p.title.title_s.our-works__gallery-name
+                            p.text.text_s.our-works__gallery-place
+            a.btn-rect.btn-rect_dark.our-works__btn.js-show-more-photo-btn(href="" data-btn-open="Показать еще" data-btn-close="Скрыть").
+                Показать еще
+    section.section.about#about
+        div.container.about__container
+            div.about__content
+                div.about__content-item.about__content-item_photo
+                    img.about__photo.about__photo_big(src="images/about_us.png", alt="")
+                    img.about__photo.about__photo_small(src="images/about_us2.png", alt="")
+                div.about__content-item.about__content-item_text
+                    p.title.title_xl.about__title.title_state_hide.
+                        О нас
+                    p.about__paragraph.text_state_hide.
+                        Организация свадеб, банкетов разного уровня и масштаба, массовых праздников,кассовых мероприятий; торжеств, корпаративов, выездных мероприятий; презентаций, промо-акций, креативные решения по ATL и BTL маркетингу; написание, Start-up и курирование коммерческих проетов..
+                    <span class="about__person">
+                        <span class="about__person-photo"></span><br>
+                        <span class="about__person-name title title_s">​Минибаева<br> Гельсиня</span><br>
+                        <span class="about__person-post text text_xs">Руководитель<br> Event-агентства</span>
+                    </span>
+                    p.about__paragraph.text_state_hide.
+                        Гельсиня несёт ответственность за весь процесс организации мероприятия, от выбора площадки до проводов последнего гостя. У Event-агентства «TVOYA KOMANDA» повышенные требования к поставщикам услуг, это даёт молодожёнам уверенность в достойном результате.
+            div.about__description-wrap
+                p.about__description
+                    span.title.title_xl.about__description-title.title_state_hide.
+                        TVOYA KOMANDA 
+                    span.text.text_l.title_state_hide.
+                        - профессионалы, способные<br> организовать Ваше событие на высшем уровне.
+    section.section.adv#adv
+        div.container.adv__container
+            div#advGalleryTemplate(style="display:none;")
+                div
+                    div.adv__gallery-item
+                        div.adv__gallery-photo
+                            img.adv__gallery-photo-item(alt="")
+                            img.adv__gallery-photo-item(alt="")
+                        div.adv__gallery-text
+                            p.text.text_s.adv__gallery-paragraph
+                            div.adv__description
+                                span.title.title_s
+                                    span.adv__description-source
+                                span.adv__description-date
+            p.title.title_xl.adv__title.title_state_hide.
+                Реклама о нас
+            div.adv__gallery
+                //div
+                    div.adv__gallery-item
+                        div.adv__gallery-photo
+                            img.adv__gallery-photo-item(src="images/ad.png", alt="")
+                            img.adv__gallery-photo-item(src="images/ad.png", alt="")
+                        div.adv__gallery-text
+                            p.text.text_s.adv__gallery-paragraph.
+                                Есть в нашей жизни такие события, требующие тщательной подготовки, нужно учесть множество нюансов, составить подробный план, отдать распоряжения, проконтролировать их выполнение, чтобы потом все происходило как по волшебству легко и непринужденно. Об этом и о многом вы можете прочесть на страницах журнала «Светский» в этом декабре.
+                            div.adv__description
+                                span.title.title_s
+                                    span.adv__description-source.
+                                        Светский
+                                span.adv__description-date.
+                                    декабрь 2016
+    section.section.contacts#contacts
+        div.container.contacts__container
+            div.contacts__info
+                div.contacts__info-item.contacts__info-item_text
+                    p.title.title_xl.contacts__title.title_state_hide.
+                        Наши контакты
+                    p.text.text_s.contacts__paragraph.text_state_hide.
+                        Мы всегда рады общению с Вами! Позвоните или напишите нам и наши менеджеры проконсультируют Вас насчет примерной стоимости мероприятия и помогут договориться о встрече с командой.
+                    table.contacts__table
+                        tr.contacts__table-row
+                            td.contacts__table-col.
+                                Телефон:
+                            td.contacts__table-col
+                                a.contacts__link(href="tel:+79176349238").
+                                    8 (917) 634-92-38
+                        tr.contacts__table-row
+                            td.contacts__table-col.
+                                Email:
+                            td.contacts__table-col
+                                a.contacts__link(href="mailto:89176349238@mail.ru").
+                                    89176349238@mail.ru
+                div.contacts__info-item.contacts__info-item_photo
+                    div.contacts__photo
+
+
+
+
+
+
